@@ -1,12 +1,6 @@
 import "../css_designs/test-page.css";
-import { testfnc1 } from "../api/testfnc";
-import { UserDataContext } from "../api/context/userData";
-import { FacilityContext } from "../api/context/facility";
-import { use, useContext, useEffect } from "react";
+import { useEffect } from "react";
 import {
-  useUserId,
-  useSand,
-  useEditSand,
   useMoney,
   useEditMoney,
   useUserData,
@@ -16,7 +10,6 @@ import {
   useToolMinLevels
 } from "../api/context/get_edit";
 import {
-  useBuyFacility,
   useStockBenefit,
   useGetBenefit,
   useFacilityData,
@@ -24,17 +17,13 @@ import {
 import FacilitiesWindow from "../components/FacilitiesWindow";
 import FacilitiesView from "../components/FacilitiesView";
 import { Box } from "@mui/material";
-import { Facility } from "../api/dataType";
 import initialFacilities from "../stores/initialFacilities";
 
 const TestPage = () => {
-  const sand = useSand();
   const money = useMoney();
   const { facility, setFacility } = useFacilityData();
   const { userData, setUserData } = useUserData();
-  const editSand = useEditSand();
   const editMoney = useEditMoney();
-  const buyFacility = useBuyFacility();
   const stockBenefit = useStockBenefit();
   const getBenefit = useGetBenefit();
   const lmHeights = useLmHeights();
@@ -89,7 +78,7 @@ console.log(toolMinLevels);
     }
     requestId = requestAnimationFrame(step);
     return () => cancelAnimationFrame(requestId);
-  }, [dataLoaded, userData?.facility]);
+  }, [dataLoaded, userData?.facility, stockBenefit]);
 
   return (
     <div className="test-page">
