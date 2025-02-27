@@ -6,7 +6,6 @@
 
 <img width="478" alt="プロダクト名" src="https://github.com/user-attachments/assets/6daa2541-c0b4-4506-aec1-718d90a79233" />
 
-
 ## チーム名
 
 <!-- チームIDとチーム名を入力してください -->
