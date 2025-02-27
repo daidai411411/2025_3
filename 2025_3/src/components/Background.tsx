@@ -7,7 +7,7 @@ type Size = {
   height: number;
 };
 
-const BG_PATH = "../../img/7238.jpg";
+const BG_PATH = "/images/7238.jpg";
 
 function Background() {
   const mountainHeight = useElevation();

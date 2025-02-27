@@ -4,7 +4,7 @@ const initialFacilities: Facility[] = [
   { // 最初からアンロックされている施設
     name: "天保山公園",
     description: "天保山がある公園。隠れた花見スポット。",
-    img_path: "../../img/facilities/poket_park.png",
+    img_path: "/images/facilities/poket_park.png",
     efficiency: 1,
     cost: 10,
     magnification: 1.1,
@@ -13,7 +13,7 @@ const initialFacilities: Facility[] = [
   {
   name: "天保山大観覧車",
     description: "全60基のうち4基は床や座席部分が透明な「シースルーキャビン」となっている。",
-    img_path: "../../img/facilities/19503.png",
+    img_path: "/images/facilities/19503.png",
     efficiency: 1.3,
     cost: 15,
     magnification: 1.2,
@@ -22,7 +22,7 @@ const initialFacilities: Facility[] = [
   {
     name: "海遊館",
     description: "ジンベエザメが遊泳する「太平洋水槽」を含む14の大水槽を造るため、年間世界生産量の1.5倍（当時）にあたるアクリルガラスが使用された。",
-    img_path: "../../img/facilities/_e_town0099_s512_town0099_0.png",
+    img_path: "/images/facilities/_e_town0099_s512_town0099_0.png",
     efficiency: 3,
     cost: 20,
     magnification: 1.3,
@@ -31,7 +31,7 @@ const initialFacilities: Facility[] = [
   {
     name: "東大寺大仏",
     description: "大仏建立に用いられた銅の量は、約500トンと考えられている。（諸説あり）",
-    img_path: "../../img/facilities/kohacu.com_002196_20190314.png",
+    img_path: "/images/facilities/kohacu.com_002196_20190314.png",
     efficiency: 5,
     cost: 30,
     magnification: 1.4,
@@ -40,7 +40,7 @@ const initialFacilities: Facility[] = [
   {
     name: "あべのハルカス",
     description: "成人の日には、新成人が1階から最上階の60階まで階段で登るイベントがある。",
-    img_path: "../../img/facilities/_e_town0115_s512_town0115_0.png",
+    img_path: "/images/facilities/_e_town0115_s512_town0115_0.png",
     efficiency: 7,
     cost: 50,
     magnification: 1.5,
@@ -49,7 +49,7 @@ const initialFacilities: Facility[] = [
   {
     name: "大阪城",
     description: "安土桃山時代に豊臣秀吉によって築かれたが、現在の大阪城は江戸時代に徳川秀忠により再建されたもの。",
-    img_path: "../../img/facilities/_e_town0096_s512_town0096_7.png",
+    img_path: "/images/facilities/_e_town0096_s512_town0096_7.png",
     efficiency: 11,
     cost: 100,
     magnification: 1.6,
@@ -58,7 +58,7 @@ const initialFacilities: Facility[] = [
   {
     name: "姫路城",
     description: "太平洋戦争中には姫路も2度の空襲被害があったものの、大天守最上階に落ちた焼夷弾が不発弾となる幸運もあり奇跡的に焼失を免れた。",
-    img_path: "../../img/facilities/kankou_himejijou.png",
+    img_path: "/images/facilities/kankou_himejijou.png",
     efficiency: 15,
     cost: 150,
     magnification: 1.7,
@@ -67,7 +67,7 @@ const initialFacilities: Facility[] = [
   {
     name: "清水寺",
     description: "記録によれば、清水の舞台から実際に飛び降りた人が1694~1864年の間に未遂を含み235件、生存率は85.4パーセントであった。",
-    img_path: "../../img/facilities/68fedd7a74ee95c5653209771fa27783.png",
+    img_path: "/images/facilities/68fedd7a74ee95c5653209771fa27783.png",
     efficiency: 18,
     cost: 300,
     magnification: 1.8,
@@ -76,7 +76,7 @@ const initialFacilities: Facility[] = [
   {
     name: "平等院鳳凰堂",
     description: "10円硬貨だけでなく、切手のデザインにも取り入れられていた。",
-    img_path: "../../img/facilities/2940_3.png",
+    img_path: "/images/facilities/2940_3.png",
     efficiency: 21,
     cost: 500,
     magnification: 1.9,
@@ -85,7 +85,7 @@ const initialFacilities: Facility[] = [
   {
     name: "京都タワー",
     description: "2024年3月、ニデックが命名権を取得し、同年4月から2029年3月末までの5年間、本タワーの名称は「ニデック京都タワー」となった。",
-    img_path: "../../img/facilities/kyoto_tower256.png",
+    img_path: "/images/facilities/kyoto_tower256.png",
     efficiency: 23,
     cost: 800,
     magnification: 2.0,
@@ -94,7 +94,7 @@ const initialFacilities: Facility[] = [
   {
     name: "太陽の塔",
     description: "万博終了後に取り壊される予定であったが、撤去反対の署名運動があり、永久保存が決定された。",
-    img_path: "../../img/facilities/e1d834b97602d4a6609c07011a036746.png",
+    img_path: "/images/facilities/e1d834b97602d4a6609c07011a036746.png",
     efficiency: 29,
     cost: 1000,
     magnification: 2.1,
@@ -103,7 +103,7 @@ const initialFacilities: Facility[] = [
   {
     name: "通天閣",
     description: "地下1階にはかつて水族館があったが、オイルショックの影響で閉鎖した。",
-    img_path: "../../img/facilities/_e_town0110_s512_town0110_1.png",
+    img_path: "/images/facilities/_e_town0110_s512_town0110_1.png",
     efficiency: 31,
     cost: 1500,
     magnification: 2.2,
@@ -112,7 +112,7 @@ const initialFacilities: Facility[] = [
   {
     name: "法隆寺",
     description: "五重塔の構造は、東京スカイツリーに用いられた最新の制振構造と同じかもしれない。",
-    img_path: "../../img/facilities/kohacu.com_002194_20190312.png",
+    img_path: "/images/facilities/kohacu.com_002194_20190312.png",
     efficiency: 1,
     cost: 1,
     magnification: 1,
