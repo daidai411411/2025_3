@@ -5,7 +5,11 @@ import Status from "./Status";
 import TipPanel from "./TipPanel";
 import "../css_designs/Landscape.css";
 import HeightScale from "./HeightScale";
-import { useElevation, useLmHeights, useLmMarkpoints } from "../api/context/get_edit";
+import {
+  useElevation,
+  useLmHeights,
+  useLmMarkpoints,
+} from "../api/context/get_edit";
 import { useAddSand, useUnlockFacility } from "../api/game_functions";
 
 const MAX_ELEVATION = 100;
@@ -17,14 +21,14 @@ function Landscape({ statusValue }: { statusValue: number }) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [animationIndex, setAnimationIndex] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [elevation, setElevation] = useState<number>(45.3);
+  const [, setElevation] = useState<number>(45.3);
   const unlockFacility = useUnlockFacility();
   const markpoints = useLmMarkpoints();
 
   const handleButtonClick = () => {
     if (scale === null) return;
     const newScale = addSand();
-    setElevation((prev) => {
+    setElevation(() => {
       let next = (newScale % 10) * 10;
       if (next === 0) {
         next = 100;
@@ -63,7 +67,7 @@ function Landscape({ statusValue }: { statusValue: number }) {
     <>
       <div className="landscape">
         <div className="Height-container">
-          <HeightScale/>
+          <HeightScale />
         </div>
         <div className="container">
           <div className="box scale">

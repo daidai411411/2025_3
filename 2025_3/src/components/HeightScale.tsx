@@ -2,8 +2,12 @@ import "../css_designs/HeightScale.css";
 import { useElevation, useLmHeights } from "../api/context/get_edit";
 
 function HeightScale() {
-  const linePositions = useLmHeights() || [];
+  const linePositions = useLmHeights();
   const elevation = useElevation();
+
+  if (linePositions === null || elevation === null) {
+    return null;
+  }
 
   return (
     <>
@@ -15,8 +19,17 @@ function HeightScale() {
         // const textColor = "black"; // 文字の色は黒か透明
 
         return (
-          <div key={index} className="heightScale" style={{ bottom: `calc(100px + 10% + 90% * ${pos} / 1000)`, backgroundColor: lineColor }}>
-            <span className="heightScaleText" style={{ color: textColor }}>{pos}m</span>
+          <div
+            key={index}
+            className="heightScale"
+            style={{
+              bottom: `calc(100px + 10% + 90% * ${pos} / 1000)`,
+              backgroundColor: lineColor,
+            }}
+          >
+            <span className="heightScaleText" style={{ color: textColor }}>
+              {pos}m
+            </span>
           </div>
         );
       })}
@@ -25,4 +38,3 @@ function HeightScale() {
 }
 
 export default HeightScale;
-

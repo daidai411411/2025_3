@@ -8,7 +8,12 @@ import {
 } from "../api/context/get_edit";
 import { useFacilityData } from "../api/game_functions";
 
-function TipPanel({ imageIndex, isFading }) {
+type TipPanelProps = {
+  imageIndex: number;
+  isFading: boolean;
+};
+
+function TipPanel({ imageIndex, isFading }: TipPanelProps) {
   const images = useLmImgPaths();
   const tipsTitles = useLmNames();
   const tipsText = useLmDescriptions();

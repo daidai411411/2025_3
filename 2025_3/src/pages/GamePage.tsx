@@ -1,8 +1,7 @@
 import Landscape from "../components/Landscape";
 import Tools from "../components/Tools";
-import Facilities from "../components/Facilities";
 import Menu from "../components/Menu";
-import { useMoney, useLmHeights } from "../api/context/get_edit";
+import { useMoney } from "../api/context/get_edit";
 import {
   useStockBenefit,
   useUserData,
@@ -11,7 +10,6 @@ import {
 import { useEffect } from "react";
 import FacilitiesWindow from "../components/FacilitiesWindow";
 import FacilitiesView from "../components/FacilitiesView";
-import { Box } from "@mui/material";
 import "../css_designs/GamePage.css";
 import Background from "../components/Background";
 
@@ -36,7 +34,7 @@ function GamePage() {
     }
     requestId = requestAnimationFrame(step);
     return () => cancelAnimationFrame(requestId);
-  }, [dataLoaded, userData?.facility]);
+  }, [dataLoaded, userData?.facility, stockBenefit]);
 
   return (
     

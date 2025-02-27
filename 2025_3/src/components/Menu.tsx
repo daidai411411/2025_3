@@ -1,13 +1,13 @@
-import React, { use, useState } from 'react';
-import { useUserData } from '../api/game_functions';
-import '../css_designs/Menu.css';
-import { Button } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import React, { useState } from "react";
+import { useUserData } from "../api/game_functions";
+import "../css_designs/Menu.css";
+import { Button } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function Menu() {
   const { userData, setUserData } = useUserData();
   const [isVisible, setIsVisible] = useState(false);
-  const [newName, setNewName] = useState(userData?.name || '');
+  const [newName, setNewName] = useState(userData?.name || "");
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
@@ -21,17 +21,20 @@ function Menu() {
     if (userData) {
       const updatedUserData = { ...userData, name: newName };
       setUserData(updatedUserData);
-      localStorage.setItem('userData', JSON.stringify(updatedUserData));
+      localStorage.setItem("userData", JSON.stringify(updatedUserData));
     }
   };
 
   return (
     <div>
-      <Button sx={{
-        position: "absolute",
-        top: "10px",
-        right: "10px",
-      }} onClick={toggleVisibility}>
+      <Button
+        sx={{
+          position: "absolute",
+          top: "10px",
+          right: "10px",
+        }}
+        onClick={toggleVisibility}
+      >
         <MenuIcon />
       </Button>
       {isVisible && userData && (
@@ -41,11 +44,7 @@ function Menu() {
           <ul>
             <li>
               Name: {userData.name}
-              <input
-                type="text"
-                value={newName}
-                onChange={handleNameChange}
-              />
+              <input type="text" value={newName} onChange={handleNameChange} />
               <button onClick={updateName}>更新</button>
             </li>
             <li>Sand: {userData.sand}kg</li>
@@ -54,7 +53,7 @@ function Menu() {
             <li>Tool Level: {userData.tool_level}</li>
             <button
               onClick={() => {
-                localStorage.removeItem('userData');
+                localStorage.removeItem("userData");
                 window.location.reload();
               }}
             >

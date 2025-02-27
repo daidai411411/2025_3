@@ -22,8 +22,11 @@ function FacilitiesView() {
 
       const ratioLeft = idx / (facility.length - 1);
       const ratioBottom = (idx % 3) / 2;
-      const imageSize = MAX_IMAGE_SIZE * Math.log(10 * facilityLevels[idx] / mountainHeight + 2);
-      const zIndex = 3 - idx % 3;
+      const imageSize =
+        MAX_IMAGE_SIZE *
+        Math.log((10 * facilityLevels[idx]) / mountainHeight + 2);
+      const zIndex = 3 - (idx % 3);
+      
       return (
         <Box
           key={idx}
